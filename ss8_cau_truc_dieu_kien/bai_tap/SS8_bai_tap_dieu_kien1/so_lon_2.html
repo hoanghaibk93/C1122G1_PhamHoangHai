@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("a");
+    let b = +prompt("b");
+    let c= +prompt("c");
+    if (a == b && b == c) {
+        document.write("-1");
+    } else if (a > b && b > c) {
+        document.write(b);
+    } else if (b >= c && c >= a) {
+        document.write(c);
+    } else if (c >= a && a >= b){
+        document.write(a);
+    }
+
+</script>
+</body>
+</html>

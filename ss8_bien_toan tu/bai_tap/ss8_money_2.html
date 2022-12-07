@@ -13,7 +13,7 @@
             <th>To Currency</th>
         </tr>
         <tr>
-            <th><input type="number" id="amount"</th>
+            <th><input type="number" id="amount"></th>
             <th><select id="form">
                 <option value="VND">VND12</option>
                 <option value="USD">USD12</option>
@@ -44,15 +44,14 @@
 
             } else if (formCurrency === "USD" && toCurrency === "USD") {
                 result = amount;
-                document.getElementById("ketqua").innerHTML = result + " USD"
+                document.getElementById("ketqua").innerHTML = result + " USD";
             } else if (formCurrency === "USD" && toCurrency === "VND") {
                 result = amount * 23000;
-                document.getElementById("ketqua").innerHTML = result + " VND"
+                document.getElementById("ketqua").innerHTML = result + " VND";
             }
 
         }
     </script>
-    </table>
 </form>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+    let score = + prompt("Nhập điểm kiểm tra");
+    let score2 = + prompt("Nhập điểm thi giửa kỳ");
+    let score3 = + prompt("nhập điểm thi cuối kỳ");
+    let result = (score + score2 * 2 + score3 * 3) / 6
+    if (score < 0 || score > 10 || score2 < 0 || score2 > 10 || score3 < 0 || score3 > 10) {
+        document.write("Nhập điểm sai")
+    } else if (result < 5) {
+        document.write("Điểm trung bình là " + result + " Xếp hạng kém");
+    } else if (result < 6.5) {
+        document.write("Điểm trung bình là " + result + " Xếp hạng trung bình");
+    } else if (result < 8) {
+        document.write("Điểm trung bình là " + result + " Xếp hạng khá");
+    } else {
+        document.write("Điểm trung bình là " + result + " Xếp hạng giỏi");
+    }
+</script>
+</body>
+</html>

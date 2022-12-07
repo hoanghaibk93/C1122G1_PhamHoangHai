@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm 3 số lớn nhất</title>
+</head>
+<body>
+<script>
+    let numberOne = +prompt("Nhập số nguyên thứ nhất");
+    let numberTwo = +prompt("Nhập số nguyên thứ hai");
+    let numberThree = +prompt("Nhập số nguyên thứ ba");
+    if (numberOne > numberTwo) {
+        if (numberOne > numberThree) {
+            document.write("Số nguyên lớn nhất là " + numberOne);
+        } else {
+            document.write("Số nguyên lớn nhất là " + numberThree);
+        }
+    } else if (numberTwo > numberThree) {
+        document.write("Số nguyên lớn nhất là " + numberTwo);
+    } else {
+        document.write("Số nguyên lớn nhất là " + numberThree);
+    }
+</script>
+</body>
+</html>

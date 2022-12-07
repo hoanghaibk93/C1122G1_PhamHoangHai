@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền hoa hồng</title>
+</head>
+<body>
+<script>
+    let sales = +prompt("Nhập doanh số bán hàng");
+    let commission;
+    if (sales <= 0) {
+        commission = 0;
+    } else if (sales < 1000000) {
+        commission = sales * 0.01;
+    } else if (sales < 5000000) {
+        commission = sales * 0.03;
+    } else if (sales < 10000000) {
+        commission = sales * 0.05;
+    } else {
+        commission = sales * 0.08;
+    }
+    alert("Số tiền hoa hồng là " + commission);
+</script>
+</body>
+</html>
