@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let numberElec = +prompt("nhập số điện");
+    let moneyElec;
+    if (numberElec < 0) {
+        alert("Người dùng nhập sai số điện");
+    } else if (numberElec < 100) {
+        moneyElec = numberElec * 3000;
+        alert("Tiền điện là " + moneyElec + " VNĐ");
+    } else {
+        moneyElec = numberElec * 3500;
+        alert("Tiền điện là " + moneyElec + " VNĐ");
+    }
+</script>
+</body>
+</html>

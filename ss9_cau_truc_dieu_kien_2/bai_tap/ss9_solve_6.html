@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<script>
+    let numberA = +prompt("Nhập hệ số a theo phương trình ax +b = 0");
+    let numberB = +prompt("Nhập hệ số b theo phương trình ax +b = 0");
+    let numberX = -numberB / numberA;
+    if ((numberA === 0) && (numberB === 0)) {
+        document.write("Phương trình vô số nghiệm");
+    } else if ((numberA === 0) && (numberB !== 0)) {
+        document.write("Phương trình vô nghiệm");
+    } else {
+        document.write("Phương trình có nghiệm là " + numberX);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let numberA = + prompt("Nhập hệ số a theo phương trình ax2+bx+c=0 (a khac 0)");
+    let numberB = + prompt("Nhập hệ số b theo phương trình ax2+bx+c=0 (a khac 0)");
+    let numberC = + prompt("Nhập hệ số c theo phương trình ax2+bx+c=0 (a khac 0)");
+    let detal = numberB * numberB - 4 * numberA * numberC;
+    let resultX1;
+    let resultX2;
+    let resultX;
+    if (detal < 0) {
+        document.write("Phương trình vô nghiệm");
+    } else if (detal === 0) {
+        resultX = (- numberB)/ (2 * numberA);
+        document.write("Phương trình có nghiệm kép x1=x2=" + resultX);
+    } else {
+        resultX1 = (- numberB + Math.sqrt(detal)) / (2 * numberA);
+        resultX2 = (- numberB - Math.sqrt(detal)) / (2 * numberA);
+        document.write("Phương trình có nghiệm x1=" + resultX1);
+        document.write("Phương trình có nghiêm x2=" + resultX2);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Nhập số tiền gửi ngân hàng");
+    let year = +prompt("nhập số năm cần gửi");
+    let rate = +prompt("nhập lãi suất hàng năm (đơn vị %)");
+    let number = +prompt("nhập số lần tiền lãi nhập gốc hàng năm");
+    let result = money * Math.pow((1 + (rate / 100) / number), (number * year));
+    alert("Lãi kép ngân hàng là " + result + " VNĐ");
+</script>
+</body>
+</html>
