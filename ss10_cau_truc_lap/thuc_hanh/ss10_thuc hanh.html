@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sout = "<table border='1'>";
+    let l = +prompt("input size");
+    for (let i = 1; i <= l; i++) {
+        sout = sout + "<tr>";
+        for (j = 1; j <= l; j++) {
+            sout = sout + "<td>" + i * j + "</td>";
+            console.log(sout);
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    console.log(sout);
+    document.write(sout);
+</script>
+</body>
+</html>
