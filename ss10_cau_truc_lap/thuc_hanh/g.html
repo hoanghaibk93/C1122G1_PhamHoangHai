@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>So nguyen to</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
-    let number = 2;
-    let count = 0;
-    let countof = 0;
-    let totalNumber = +prompt("nhập số lượng số nguyên tố đầu tiền cần in: ");
-    while (countof <= (totalNumber - 1)) {
 
-        for (let i = 2; i <= number - 1; i++) {
+    let number = 2;
+    let countOfPrime = 0;
+    let count = 0;
+    while (countOfPrime < 20) {
+
+        if (number == 2 || number == 3) {
+            document.write(number + "<br>");
+            countOfPrime++;
+            number++;
+            continue;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
             if (number % i === 0) {
                 count++;
                 break;
             }
         }
         if (count == 0) {
-            countof++;
             document.write(number + "<br>");
+            countOfPrime++;
+
         }
         count = 0;
         number++;
     }
-
 </script>
 </body>
 </html>
