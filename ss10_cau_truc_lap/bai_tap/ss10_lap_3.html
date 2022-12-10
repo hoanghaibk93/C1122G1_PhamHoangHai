@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let f1 = 0;
+    let f2 = 1;
+    let f3;
+    let fibonacci = "";
+    let number = +prompt("nhập số lượng số fibonacii");
+    for (let i = 1; i <= number; i++) {
+        if (i === 1) {
+            fibonacci = fibonacci + "1" + "<br>";
+        } else {
+            f3 = f1 + f2;
+            f1 = f2;
+            f2 = f3;
+            fibonacci = fibonacci + f3 + "<br>";
+        }
+    }
+    document.write(fibonacci);
+</script>
+</body>
+</html>

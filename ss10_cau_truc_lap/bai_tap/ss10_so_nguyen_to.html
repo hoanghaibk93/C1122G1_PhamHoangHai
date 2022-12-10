@@ -6,18 +6,26 @@
 </head>
 <body>
 <script>
-    let number = +prompt("Nhập số lượng số nguyên tố cần in ra");
+    let number = 2;
     let count = 0;
-    for (let i = 2; i <= number - 1; i++) {
-        if (number % i == 0) {
-            count++;
+    let countof = 0;
+    while (countof <= 20) {
+
+        for (let i = 2; i <= number - 1; i++) {
+            if (number % i === 0) {
+                count++;
+                //break;
+            }
         }
+        if (count === 0) {
+            number += "số nguyên tố là";
+            countof++;
+        }
+        count = 0;
+        number++;
     }
-    if (count == 0) {
-        alert(number + " là số nguyên tố");
-    } else {
-        alert(number + " không là số nguyên tố");
-    }
+
+
 </script>
 </body>
 </html>

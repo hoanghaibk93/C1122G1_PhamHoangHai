@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let f1 = 0;
+    let f2 = 1;
+    let f3;
+    let totalFibonacci = 1;
+    let number = +prompt("nhập số lượng số fibinacci cần tính tổng:");
+    for (let i = 1; i < number; i++) {
+        f3 = f1 + f2;
+        f1 = f2;
+        f2 = f3;
+        totalFibonacci = totalFibonacci + f3;
+    }
+    document.write("Tổng số " + number + " fibonacci đầu tiên là :" + totalFibonacci);
+</script>
+</body>
+</html>
