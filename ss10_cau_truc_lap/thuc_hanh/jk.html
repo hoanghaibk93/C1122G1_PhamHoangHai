@@ -6,28 +6,16 @@
 </head>
 <body>
 <script>
-    let number = +prompt("Nhập vào muốn đoán trong khoảng: ");
+    let numberMax = +prompt("Nhập vào muốn đoán trong khoảng: ");
     let numberrandom = Math.floor(Math.random() * numberMax);
+    alert(numberrandom)
     let numberGuess = +prompt("Nhập số bạn đoán");
     for (i = 1; i <= 3; i++) {
         if (numberGuess > numberrandom) {
             alert("Số bạn đoán lớn hơn");
             numberGuess = +prompt("Nhập số bạn đoán");
         }
-        if else
-        (numberGuess < numberrandom);
-        {
-            alert("Số bạn đoán bé hơn");
-            numberGuess = +prompt("Nhập số bạn đoán");
-        }
-        if else
-        (numberGuess = numberrandom);
-        {
-            alert("Chúc mừng, bạn đã đoán trúng");
-        }
     }
-    alert("Bạn hết số lần đoán");
 </script>
-
 </body>
 </html>

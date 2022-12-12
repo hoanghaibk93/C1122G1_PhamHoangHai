@@ -5,23 +5,25 @@
     <title>ung dung may tinh</title>
 </head>
 <body>
-<input type="number" id="number1">
-<input type="number" id="number2"> <br>
-<button type="button" onclick="Addition()">Addition(+)</button>
-<button type="button" onclick="Subtraction()">Subtraction(-)</button>
-<button type="button" onclick="Multiplication()">Multiplication(X)</button>
-<button type="button" onclick="Division()">Division(/)</button><br>
+<input id="number1" type="number">
+<input id="number2" type="number"> <br>
+<button onclick="Addition()">Addition(+)</button>
+<button onclick="Subtraction()">Subtraction(-)</button>
+<button onclick="Multiplication()">Multiplication(X)</button>
+<button onclick="Division()">Division(/)</button>
+<br>
 <d id="result1"></d>
 <script>
 
     function Addition() {
         let inputNumberOne = document.getElementById("number1").value;
         let inputNumberTwo = document.getElementById("number2").value;
-     let numberOne = parseFloat(inputNumberOne);
-     let numberTwo = parseFloat(inputNumberTwo);
-       let result = numberOne + numberTwo;
+        let numberOne = parseFloat(inputNumberOne);
+        let numberTwo = parseFloat(inputNumberTwo);
+        let result = numberOne + numberTwo;
         document.getElementById("result1").innerHTML = "Result Addition: " + result;
     }
+
     function Subtraction() {
         let inputNumberOne = document.getElementById("number1").value;
         let inputNumberTwo = document.getElementById("number2").value;
@@ -30,6 +32,7 @@
         let result = numberOne - numberTwo;
         document.getElementById("result1").innerHTML = "Result Subtraction: " + result;
     }
+
     function Multiplication() {
         let inputNumberOne = document.getElementById("number1").value;
         let inputNumberTwo = document.getElementById("number2").value;
@@ -38,6 +41,7 @@
         let result = numberOne * numberTwo;
         document.getElementById("result1").innerHTML = "Result Multiplication: " + result;
     }
+
     function Division() {
         let inputNumberOne = document.getElementById("number1").value;
         let inputNumberTwo = document.getElementById("number2").value;

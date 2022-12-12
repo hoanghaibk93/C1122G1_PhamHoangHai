@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng của 30 số chia hết cho 7</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    let count = 0;
+    let number = 0;
+    let totalNumber = +prompt("Nhập số lượng số chia hết cho 7 đầu tiên: ");
+    for (let i = 1; count <= totalNumber - 1; i++) {
+        if (number % 7 === 0) {
+            count++;
+            total = total + number;
+        }
+        number++;
+    }
+    document.write("Tổng của " + totalNumber + " số chia hết cho 7 đầu tiên là " + total);
+</script>
+</body>
+</html>
