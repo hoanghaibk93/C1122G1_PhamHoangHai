@@ -9,23 +9,23 @@
 <script>
     function start() {
         let numberMax = +prompt("Nhập vào muốn đoán trong khoảng: ");
-        let numberrandom = Math.floor(Math.random() * numberMax);
+        let numberRandom = Math.floor(Math.random() * numberMax);
         let numberGuess = +prompt("Nhập số bạn đoán");
         let count = 0;
-        while (numberrandom !== numberGuess) {
+        while (numberRandom !== numberGuess) {
             count++;
             if (count === 4) {
                 alert("Bạn hết số lần đoán");
                 break;
-            } else if (numberGuess > numberrandom) {
+            } else if (numberGuess > numberRandom) {
                 alert("Số bạn đoán lớn hơn");
                 numberGuess = +prompt("Nhập số bạn đoán");
-            } else if (numberGuess < numberrandom) {
+            } else if (numberGuess < numberRandom) {
                 alert("Số bạn đoán bé hơn");
                 numberGuess = +prompt("Nhập số bạn đoán");
             }
         }
-        if (numberGuess === numberrandom) {
+        if (numberGuess === numberRandom) {
             alert("Chúc mừng, bạn đã đoán trúng");
         }
     }
