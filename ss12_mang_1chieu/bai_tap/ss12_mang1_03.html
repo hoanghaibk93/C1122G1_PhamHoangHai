@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng số nguyên, in ra giá trị trung bình</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [];
+    let indexMax;
+    let lengArr = +prompt("Nhập vào độ dài của mảng");
+    for (let i = 0; i < lengArr; i++) {
+        arrayNumber[i] = +prompt("Nhập vào các số nguyên là phần tử của mảng");
+    }
+    let max = arrayNumber[0];
+    let total = 0;
+    for (let i = 0; i < lengArr; i++) {
+        total += arrayNumber[i];
+        if (max < arrayNumber[i]) {
+            max = arrayNumber[i];
+        }
+    }
+    document.write("Phần tử có gia trị lớn nhất là " + max + " và có giá trị trung bình là " + total / lengArr);
+</script>
+</body>
+</html>

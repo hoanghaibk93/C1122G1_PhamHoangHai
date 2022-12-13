@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao caro</title>
+</head>
+<body>
+<h1>Caro Game Simple</h1>
+<p id="inputtable"></p>;
+<input onclick='changeValue()' type='button' value='Chang Value'>
+<script>
+    let array2 = [];
+    let table2 = "";
+    for (let i = 0; i < 5; i++) {
+        array2[i] = [0, 0, 0, 0, 0];
+        //hoặc array2[i] = new Array(0, 0, 0, 0, 0);
+        //document.write(array2[i] +"<br>");
+    }
+    for (let i = 0; i < 5; i++) {
+        table2 += "<br>";
+        for (let j = 0; j < 5; j++) {
+            table2 += array2[i][j] + "&nbsp&nbsp";
+        }
+    }
+    document.getElementById("inputtable").innerHTML = table2;
+
+    function changeValue() {
+        let positionX = prompt("Nhập chỉ số X");
+        let positiony = prompt('Nhập chỉ số Y');
+        table2 = "";
+        array2[positionX][positiony] = "x";
+        for (let i = 0; i < 5; i++) {
+            table2 += "<br>";
+            for (let j = 0; j < 5; j++) {
+                table2 += array2[i][j] + "&nbsp&nbsp&nbsp&nbsp";
+            }
+        }
+        table2 += "<br></br><input type='button' value='Chang Value' onclick='changeValue()'>";
+        document.getElementById("inputtable").innerHTML = table2;
+    }
+</script>
+</body>
+</html>

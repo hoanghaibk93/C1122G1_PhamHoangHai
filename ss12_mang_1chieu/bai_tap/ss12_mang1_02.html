@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên lớn nhất</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [];
+    let indexMax;
+    for (let i = 0; i < 10; i++) {
+        arrayNumber[i] = +prompt("Nhập vào 10 số nguyên khác nhau");
+    }
+    let max = arrayNumber[0];
+    for (let i = 0; i < 10; i++) {
+        if (max < arrayNumber[i]) {
+            max = arrayNumber[i];
+        }
+    }
+    document.write("Phần tử có gia trị lớn nhất là " + max + " và có chỉ số là " + arrayNumber.indexOf(max));
+
+</script>
+</body>
+</html>

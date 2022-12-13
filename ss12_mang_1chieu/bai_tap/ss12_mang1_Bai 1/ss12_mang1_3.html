@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập chuỗi thường thành dạng chữ hoa</title>
+</head>
+<body>
+<script>
+    let inputString = prompt("Nhập vào một chuỗi");
+    let arrayString = inputString.split("");
+    for (let i = 0; i < arrayString.length; i++) {
+        if ((arrayString[i]) !== (arrayString[i].toLowerCase())) {
+            arrayString[i] = arrayString[i].toLowerCase();
+        } else {
+            arrayString[i] = arrayString[i].toUpperCase();
+        }
+    }
+    document.write(arrayString.join(""));
+</script>
+</body>
+</html>

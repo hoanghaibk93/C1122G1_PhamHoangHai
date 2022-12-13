@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [];
+    let count = 0;
+    let lengArr = +prompt("Nhập vào độ dài của mảng");
+    for (let i = 0; i < lengArr; i++) {
+        arrayNumber[i] = +prompt("Nhập vào các số nguyên là phần tử của mảng");
+        if (arrayNumber[i] < 0) {
+            count++;
+        }
+    }
+    document.write("Số giá trị nguyên âm của mảng là " + count);
+</script>
+</body>
+</html>

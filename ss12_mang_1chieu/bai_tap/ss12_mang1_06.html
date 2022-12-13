@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [];
+    let count = 0;
+    for (let i = 0; i < 10; i++) {
+        arrayNumber[i] = +prompt("Nhập vào các số nguyên là phần tử của mảng");
+    }
+    let v = +prompt("nhập vào nguyên V");
+    for (let i = 0; i < 10; i++) {
+        if (v === arrayNumber[i]) {
+            count++;
+        }
+    }
+    if (count === 0) {
+        document.write("V is not in the array");
+    } else {
+        document.write("V is in the array");
+    }
+</script>
+</body>
+</html>

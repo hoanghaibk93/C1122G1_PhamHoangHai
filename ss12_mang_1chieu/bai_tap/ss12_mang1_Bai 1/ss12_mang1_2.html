@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chèn dấu - giữa 2 số chẵn</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập vào một số");
+    let num = number.split("");
+    for (let i = 0; i < num.length; i++) {
+        if ((num[i] % 2 === 0) && (num[i + 1] % 2 === 0)) {
+            num.splice(i + 1, 0, "-");
+        }
+    }
+    document.write(num.join(""));
+</script>
+</body>
+</html>

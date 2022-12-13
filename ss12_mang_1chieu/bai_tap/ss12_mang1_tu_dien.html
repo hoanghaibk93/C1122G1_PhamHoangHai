@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<d>Nhập từ:</d>
+<input id="word" type="text">
+<button onclick="translateEnglish()">Dịch</button>
+<br>
+<d id="translate"></d>
+<script>
+    function translateEnglish() {
+        let arrya1 = ["dog", "cat", "tiger", "fish", "one", "two"];
+        let array2 = ["chó", "mèo", "hổ", "cá", 1, 2];
+        let textEnglish = document.getElementById("word").value;
+        count = 0;
+        for (let i = 0; i < arrya1.length; i++) {
+            if (arrya1[i] === textEnglish) {
+                document.getElementById("translate").innerHTML = array2[i];
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("Không tìm thấy");
+        }
+    }
+
+</script>
+</body>
+</html>

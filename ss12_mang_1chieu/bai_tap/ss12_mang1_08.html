@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp theo thứ tự giảm dần</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [];
+    for (let i = 0; i < 10; i++) {
+        arrayNumber[i] = +prompt("Nhập vào các số nguyên là phần tử của mảng");
+    }
+    let arrayUpDown = arrayNumber.sort(function (a, b) {
+        return b - a;
+    });
+    document.write(arrayUpDown);
+</script>
+</body>
+</html>
