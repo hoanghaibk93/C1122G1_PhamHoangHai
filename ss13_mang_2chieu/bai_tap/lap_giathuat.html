@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stringOne = prompt("nhập chuổi 1");
+    let stringTwo = prompt("nhập chuổi 2");
+    let arrStringOne = stringOne.split("");
+    let arrStringTwo = stringTwo.split("");
+    let count1 = 0;
+    let count2 = 0;
+    let index;
+    for (let i = 0; i < arrStringOne.length; i++) {
+        for (let j = 0; j < arrStringTwo.length; j++) {
+            if (arrStringOne[i] === arrStringTwo[j]) {
+                count1++;
+            }
+        }
+    }
+
+    for (let i = 0; i < arrStringOne.length; i++) {
+        for (let j = 0; j < arrStringOne.length; j++) {
+            if (arrStringOne[i] === arrStringOne[j]) {
+                count2++;
+            }
+        }
+    }
+    
+    alert(count2);
+
+</script>
+</body>
+</html>

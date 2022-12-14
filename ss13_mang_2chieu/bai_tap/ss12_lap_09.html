@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối mảng</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    let arrayC = new Array(20);
+    for (let i = 0; i < 10; i++) {
+        arrayA[i] = +prompt("Nhập 10 số nguyên của mảng a");
+    }
+    for (let j = 0; j < 10; j++) {
+        arrayB[j] = +prompt("Nhập 10 số nguyên của mảng b");
+    }
+    arrayC = arrayA.concat(arrayB);
+    document.write(arrayC);
+</script>
+</body>
+</html>

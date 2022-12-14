@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 2 chuỗi có giống nhau hay không</title>
+</head>
+<body>
+<script>
+    let stringOne = prompt("Nhập chuỗi 1");
+    let stringTwo = prompt("Nhập chuỗi 2");
+    let arrOne = stringOne.split("");
+    let arrTwo = stringTwo.split("");
+    let flag = true;
+    for (let i = 0; i < arrOne.length; i++) {
+        if (arrOne[i] !== arrTwo[i]) {
+            flag = false;
+            break;
+        }
+    }
+    if (flag === true) {
+        document.write("Hai chuỗi giống nhau");
+    } else {
+        document.write("Hai chuỗi không giống nhau");
+    }
+</script>
+</body>
+</html>
+<!--let stringOne = prompt("Nhập chuỗi 1");-->
+<!--let stringTwo = prompt("Nhập chuỗi 2");-->
+<!--let arrOne = stringOne.split("");-->
+<!--let arrTwo = stringTwo.split("");-->
+<!--let  count = 0;-->
+<!--if (arrOne.length === arrTwo.length) {-->
+<!--for (let i = 0; i < arrOne.length; i++) {-->
+<!--if (arrOne[i] === arrTwo[i]) {-->
+<!--count++;-->
+<!--}-->
+<!--}-->
+<!--if (count === arrOne.length) {-->
+<!--document.write("Hai chuỗi giống nhau");-->
+<!--} else {-->
+<!--document.write("Hai chuỗi không giống nhau");-->
+<!--}-->
+<!--} else {-->
+<!--document.write("Hai chuỗi không giống nhau");-->
+<!--}-->
