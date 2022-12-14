@@ -7,18 +7,31 @@
 <body>
 <script>
     let arrayNumber = [];
-    let indexMax;
-    for (let i = 0; i < 10; i++) {
-        arrayNumber[i] = +prompt("Nhập vào 10 số nguyên khác nhau");
+    let count;
+    do {
+        count = 0;
+        for (let i = 0; i < 10; i++) {
+            arrayNumber[i] = +prompt("Nhập vào 10 số nguyên khác nhau");
+        }
+        for (let i = 0; i < 10; i++) {
+            for (let j = i + 1; j < 10; j++) {
+                if (arrayNumber[i] === arrayNumber[j]) {
+                    count++;
+                }
+            }
+        }
+        if (count > 0) {
+            alert("nhập lại");
+        }
     }
+    while (count > 0) ;
     let max = arrayNumber[0];
     for (let i = 0; i < 10; i++) {
         if (max < arrayNumber[i]) {
             max = arrayNumber[i];
         }
     }
-    document.write("Phần tử có gia trị lớn nhất là " + max + " và có chỉ số là " + arrayNumber.indexOf(max));
-
+    document.write("Phần tử có giá trị lớn nhất là " + max + " và có chỉ số là " + arrayNumber.indexOf(max));
 </script>
 </body>
 </html>
