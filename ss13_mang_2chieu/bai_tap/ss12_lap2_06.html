@@ -6,27 +6,16 @@
 </head>
 <body>
 <script>
-    let arrayString = [];
-    let lengArr = prompt("Nhập vào độ dài của mảng");
-    let arrElement;
+    let arrLength = prompt("Nhập chiều dài của mảng ký tự");
+    let arr = [];
     let arrReplace;
-    let arrAdd;
-    let arrfinal;
-    for (let i = 0; i < lengArr; i++) {
-        arrayString[i] = prompt("Nhập vào các phần tử của mảng");
-        arrElement[i] = arrayString[i].split("");
-    }
-    for (let i = 0; i < lengArr; i++) {
-        for (let j = 0; j < arrElement[i].length; j++) {
-            if ((arrElement[i])[j] === "-") {
-                arrReplace[i] = arrElement[i].splice(j, 1, '_');
-                //arrAdd[i] = arrReplace[i].join("");
-               // arrfinal = arrAdd[i].join("");
-            }
+    for (let i = 0; i < arrLength; i++) {
+        arr[i] = prompt("Nhập các phần tử của mảng");
+        if (arr[i] === "-") {
+            arr.splice(i, 1, "_");
         }
     }
-    alert(arrElement[i])
-    //alert(arrfinal);
+    document.write(arr);
 </script>
 </body>
 </html>
