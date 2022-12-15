@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mảng</title>
+</head>
+<body>
+<script>
+    let starOne = ["Polaris", "Aldedaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let starTwo = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+    let star = prompt("Nhập vào tên ngôi sao cần tìm:");
+    alert(compareStar(star));
+    function compareStar(a) {
+        for (let i = 0; i < starOne.length; i++) {
+            if (a === starOne[i]) {
+                return starTwo[i];
+            }
+        }
+        return "Không tìm thấy ngôi sao nào";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo hàm 2 tham số</title>
+</head>
+<body>
+<script>
+    let inputNumberOne = +prompt("Nhập vào số thứ nhất");
+    let inputNumberTwo = +prompt("Nhập vào số thứ hai");
+    let total = inputNumberOne + inputNumberTwo;
+    if (compareNumber(inputNumberOne, inputNumberTwo)) {
+        alert(inputNumberOne + " lớn hơn " + inputNumberTwo);
+    } else {
+        alert("Tổng của 2 tham số là " + total);
+    }
+
+    function compareNumber(numberOne, numberTwo) {
+        if (numberOne > numberTwo) {
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
