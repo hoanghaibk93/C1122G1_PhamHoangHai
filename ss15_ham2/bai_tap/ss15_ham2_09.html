@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check a character belong with array or not</title>
+</head>
+<body>
+<script>
+    let lengthArr = prompt("Enter a length of array");
+    let arrOne = [];
+    for (let i = 0; i < lengthArr; i++) {
+        arrOne[i] = prompt("Enter the element of array");
+    }
+    let inputCharacter = prompt("Enter a character");
+    alert(checkCharacter(inputCharacter, arrOne));
+
+    function checkCharacter(character, arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (character === arr[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+</script>
+</body>
+</html>

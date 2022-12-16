@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find a smallest number</title>
+</head>
+<body>
+<script>
+    let inputNumberOne = prompt(" Enter the first number");
+    let inputNumberTwo = prompt(" Enter the second number");
+    let inputNumberThree = prompt("Enter the third number");
+    alert("Smallest number is: " + findSmallestNumber(inputNumberOne, inputNumberTwo, inputNumberThree));
+
+    function findSmallestNumber(numberOne, numberTwo, numberThree) {
+        if ((numberOne <= numberTwo) && (numberOne <= numberThree)) {
+            return numberOne;
+        } else if (numberTwo <= numberThree) {
+            return numberTwo;
+        } else {
+            return numberThree;
+        }
+    }
+</script>
+</body>
+</html>

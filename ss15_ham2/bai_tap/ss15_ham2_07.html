@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Displace number</title>
+</head>
+<body>
+<script>
+    let number1 = prompt("Enter the first number");
+    let number2 = prompt("Enter the second number");
+    alert(displaceNumber(number1, number2));
+
+    function displaceNumber(numberOne, numberTwo) {
+        let number;
+        number = numberOne;
+        numberOne = numberTwo;
+        numberTwo = number;
+        return numberOne + " , " + numberTwo;
+
+    }
+</script>
+</body>
+</html>
