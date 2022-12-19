@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số hoàn hảo</title>
+</head>
+<body>
+<script>
+    //Kiểm tra inputnumber có phải là số hoàn hảo hay không
+    let inputNumber = +prompt("Nhập vào một số bất kỳ");
+    if (isPerfectNumber(inputNumber)) {
+        alert(inputNumber + " là số hoàn hảo");
+    } else {
+        alert(inputNumber + " không phải là số hoàn hảo");
+    }
+    //Hiện số hoàn bảo bé hơn inputNumber
+    for (let i = 1; i < inputNumber; i++) {
+        if (isPerfectNumber(i)) {
+            document.write(i + "<br>");
+        }
+    }
+
+    function isPerfectNumber(number) {
+        let result = 0;
+        for (let i = 1; i < number; i++) {
+            if (number % i === 0) {
+                result += i;
+            }
+        }
+        if (result === number) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

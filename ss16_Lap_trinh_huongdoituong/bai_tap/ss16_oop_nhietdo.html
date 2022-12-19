@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class of temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(degreeC) {
+            if (degreeC < -275) {
+                alert("degreeC falied");
+            } else {
+                this.degreeC = degreeC;
+            }
+            this.degreeF = function () {
+                return (9 * this.degreeC + 5 * 32) / 5;
+            };
+            this.degreeK = function () {
+                return this.degreeC + 273.15;
+            };
+        }
+
+        convert() {
+            alert("Độ F: " + this.degreeF() + ", Độ K: " + this.degreeK());
+        }
+    }
+
+    let Temperature1 = new Temperature(25);
+    Temperature1.convert();
+</script>
+</body>
+</html>

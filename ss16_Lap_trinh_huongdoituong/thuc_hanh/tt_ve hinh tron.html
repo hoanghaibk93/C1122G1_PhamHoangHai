@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lop hinh tron</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius = radius;
+            // this.color = color;
+            this.getRadius = function () {
+                return this.radius;
+            };
+            this.getArea = function () {
+                return Math.PI * radius * radius;
+            };
+        }
+
+        work() {
+            alert("Ban kinh la " + this.radius + " ; dien tich " + this.getArea());
+        }
+    }
+
+    let drawCicle = new Circle(2);
+    drawCicle.work();
+    // let r = drawCicle.getRadius();
+    // let area = drawCicle.getArea();
+    // alert("Ban kinh la " + r +" ; dien tich " + area)
+</script>
+</body>
+</html>

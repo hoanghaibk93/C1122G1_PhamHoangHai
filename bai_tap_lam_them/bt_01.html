@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberArray = [];
+    let lengthArray = +prompt("nhập chiều dài của mảng");
+    let a;
+    for (let i = 0; i < lengthArray; i++) {
+        numberArray[i] = +prompt("Nhập dãy số trong mảng");
+    }
+    //sắp xếp dảy só tăng dần
+    for (let i = 0; i < lengthArray; i++) {
+        for (let j = i + 1; j < lengthArray; j++) {
+            if (numberArray[i] > numberArray[j]) {
+                a = numberArray[i];
+                numberArray[i] = numberArray[j];
+                numberArray[j] = a;
+            }
+        }
+    }
+    //Đếm có bao nhiêu lần trùng
+    let count = 0;
+    for (let i = 0; i < lengthArray - 1; i++) {
+        if (numberArray[i] === numberArray[i + 1]) {
+            count++;
+        }
+    }
+    let numberOther = lengthArray - count; //các số khác nhau trong dãy số
+    if (lengthArray <= 1) {
+        alert("false");
+    } else if (lengthArray % numberOther === 0) {
+        alert("true");
+    } else {
+        alert("false");
+    }
+
+</script>
+</body>
+</html>

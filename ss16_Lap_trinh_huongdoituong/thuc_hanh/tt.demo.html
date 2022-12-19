@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Employee {
+        constructor(nameEmployee, dateOfBirth, address, viTri, salary) {
+            this.nameEmployee = nameEmployee;
+            this.dateOfBirth = dateOfBirth;
+            this.address = address;
+            this.a = viTri;
+            this.salary = salary;
+        }
+
+        work() {
+            alert(this.nameEmployee + " Di lam voi vi tri " + this.a);
+        }
+    }
+
+    //let employeeOfCodeGym = [];
+    let haiTT = new Employee("HaiTT", "12/12/1222", "Quang Nam", "trainer");
+    let trungDp = new Employee("TrungDP", "13/11/1223", "Da Nang", "CAH");
+    //employeeOfCodeGym.push(haiTT);
+   // employeeOfCodeGym.push(trungDp);
+    haiTT.work();
+    trungDp.work();
+</script>
+</body>
+</html>

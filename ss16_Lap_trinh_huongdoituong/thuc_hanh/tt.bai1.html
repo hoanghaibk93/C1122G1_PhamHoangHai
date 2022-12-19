@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Date {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function (day) {
+                return this.day;
+            };
+            this.getMonth = function (month) {
+                return this.month;
+            };
+            this.getYear = function (year) {
+                return this.year;
+            };
+            this.setDay = function (day) {
+                this.day = day;
+            };
+            this.setMonth = function (month) {
+                this.month = month;
+            };
+            this.setYear = function (year) {
+                this.year = year;
+            };
+        }
+
+        work() {
+            alert(this.day + "/" + this.month + "/" + this.year);
+        }
+    }
+
+    let HoangHai = new Date(4, 11, 1993);
+    alert(HoangHai.getDay())
+    alert(HoangHai.getMonth())
+    HoangHai.work();
+    HoangHai.setDay(5);
+    HoangHai.setMonth(12);
+    HoangHai.setYear(2000);
+    HoangHai.work();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh các chuổi</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuổi một");
+    let b = prompt("Nhập chuổi hai");
+    let arrayA = a.split("");
+    let arrayB = b.split("");
+    let count = 0;
+    for (let i = 0; i < arrayA.length; i++) {
+        for (let j = 0; j < arrayB.length; j++) {
+            if (arrayA[i] === arrayB[j]) {
+                count++;
+                arrayB.splice(j, 1);
+                break;
+            }
+        }
+    }
+    alert("số lượng ký tự giống nhau là : " + count);
+    // let arr =[1,2,3,4,5]
+    // arr.splice(1,1)
+    // alert(arr)
+
+</script>
+</body>
+</html>

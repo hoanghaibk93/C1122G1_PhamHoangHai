@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find a smallest number in a array</title>
+</head>
+<body>
+<script>
+    let lengthNumber = +prompt("Enter a length of Array");
+    let arrOne = [];
+    for (let i = 0; i < lengthNumber; i++) {
+        arrOne[i] = +prompt("Enter element of Array");
+    }
+    //let arrOne = [7,12,6,9,20,56,89]
+    //let arrOne = [3,5,1,8,-3,7,8]
+    //let arrOne =[0,0,0,0,0]
+    //let arrOne = []
+    alert(findSmallestNumber(arrOne));
+
+    function findSmallestNumber(arr) {
+        if (arr.length === 0) {
+            return -1;
+        }
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (min >= arr[i]) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

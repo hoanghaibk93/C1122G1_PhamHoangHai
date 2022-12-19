@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class of rectangel</title>
+</head>
+<body>
+<canvas height="300" id="myRectangle" style="border: 1" width="500">ffsf</canvas>
+<script>
+    class Rectangle {
+        constructor(width, length) {
+            this.width = width;
+            this.length = length;
+            this.area = function () {
+                return this.length * this.width;
+            };
+            this.perimeter = function () {
+                return 2 * (this.length + this.width);
+            };
+            this.drawRectangle = function () {
+                var c = document.getElementById("myRectangle");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0, 0);
+                ctx.lineTo(this.length, 0);
+                ctx.stroke();
+                ctx.moveTo(this.length, 0);
+                ctx.lineTo(this.length, this.width);
+                ctx.stroke();
+                ctx.moveTo(this.length, this.width);
+                ctx.lineTo(0, this.width);
+                ctx.stroke();
+                ctx.moveTo(0, this.width);
+                ctx.lineTo(0, 0);
+                ctx.stroke();
+            };
+        }
+
+        calculate() {
+            alert("Diện tích hình tròn: " + this.area() + ", chu vi hình tròn: " + this.perimeter());
+        }
+    }
+
+    let rectangle1 = new Rectangle(100, 200);
+    rectangle1.calculate();
+    rectangle1.drawRectangle();
+</script>
+</body>
+</html>

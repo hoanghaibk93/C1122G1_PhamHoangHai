@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra đối xứng</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập vào một từ");
+    if (check(n)) {
+        alert("Đối xứng");
+    } else {
+        alert("không đối xứng");
+    }
+
+    function check(character) {
+        let arrayCharater = character.split("");
+        for (let i = 0; i < arrayCharater.length - i; i++) {
+            if (arrayCharater[i] !== arrayCharater[arrayCharater.length - i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
