@@ -5,6 +5,7 @@
     <title>lop hinh tron</title>
 </head>
 <body>
+<canvas height="200" id="myCanvas" width="200"></canvas>
 <script>
     class Circle {
         constructor(radius) {
@@ -16,6 +17,13 @@
             this.getArea = function () {
                 return Math.PI * radius * radius;
             };
+            this.drawCi = function () {
+                let c = document.getElementById("myCanvas");
+                let ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(100, 100, this.radius, 0.5 * Math.PI, 2 * Math.PI);
+                ctx.stroke();
+            };
         }
 
         work() {
@@ -23,11 +31,12 @@
         }
     }
 
-    let drawCicle = new Circle(2);
+    let drawCicle = new Circle(50);
     drawCicle.work();
     // let r = drawCicle.getRadius();
     // let area = drawCicle.getArea();
     // alert("Ban kinh la " + r +" ; dien tich " + area)
+    drawCicle.drawCi();
 </script>
 </body>
 </html>

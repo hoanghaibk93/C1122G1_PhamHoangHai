@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tương tác giữa hai đối tượng: Công tác và bóng đèn</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOn() {
+            this.status = true;
+            alert("Đèn sáng");
+        }
+
+        turnOff() {
+            this.status = false;
+            alert("Đèn tắt");
+        }
+    }
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(newLamp) {
+            this.lamp = newLamp;
+        }
+
+        switchOn() {
+            this.lamp.turnOn();
+            this.status = true;
+        }
+
+        switchOff() {
+            this.lamp.turnOff();
+            this.status = false;
+        }
+    }
+
+    for (let i = 0; i < 10 ; i++) {
+        let lampOne = new ElectricLamp(true);
+        let switchButtonOne = new SwitchButton(true, lampOne);
+        switchButtonOne.switchOn();
+        let lampTwo = new ElectricLamp(false);
+        let switchButtonTwo = new SwitchButton(false, lampTwo);
+        switchButtonTwo.switchOff();
+    }
+</script>
+</body>
+</html>

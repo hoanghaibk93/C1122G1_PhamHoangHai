@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        decrease() {
+            this.weight--;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === "male") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender() {
+            if (this.isMale()) {
+                return "male";
+            } else {
+                return "female";
+            }
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        say(string) {
+            document.write(string);
+        }
+
+        checkApple(apple) {
+            if (apple.isEmpty()) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        eat(apple) {
+            if (this.checkApple(apple)) {
+                this.weight++;
+                apple.decrease();
+            } else {
+                document.write("Mời bạn đi ăn trái táo khác");
+            }
+        }
+    }
+
+    let appleOne = new Apple(10);
+    let appleTwo = new Apple(10);
+    let adam = new Human("Adam", "male", 65);
+    let eva = new Human("Eva", "female", 50);
+    adam.eat(appleTwo);
+    eva.eat(appleOne);
+    eva.eat(appleTwo);
+    adam.eat(appleTwo);
+    adam.say("ngon quá" + "<br>");
+    eva.say("không ngon" + "<br>");
+    document.write(eva.setGender()+ "<br>");
+    document.write(appleOne.weight + "<br>");
+    document.write(appleTwo.weight + "<br>");
+    document.write(adam.weight + "<br>");
+    document.write(eva.weight + "<br>");
+
+</script>
+</body>
+</html>
