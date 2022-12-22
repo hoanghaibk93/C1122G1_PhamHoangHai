@@ -6,13 +6,13 @@
 </head>
 <body>
 <h1>Kiểm tra số ngày trong tháng</h1>
-<input type="number" id="inputMonth">
-<input type="button" onclick="calculate()" value="Tính số ngày"> <br>
+<input id="inputMonth" type="number">
+<input onclick="calculate()" type="button" value="Tính số ngày"> <br>
 <d id="calculate"></d>
 <script>
     function calculate() {
         let month2 = document.getElementById("inputMonth").value;
-        let month = parseFloat(month2)
+        let month = parseFloat(month2);
         switch (month) {
             case 2:
                 document.getElementById("calculate").innerHTML = "Tháng " + month + " có 28 hoặc 29 ngày";

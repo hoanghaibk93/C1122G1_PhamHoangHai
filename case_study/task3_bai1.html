@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng mảng prefix sums</title>
+</head>
+<body>
+<script>
+    let arrlength = prompt("enter a length of array");
+    let arr = [];
+    for (let i = 0; i < arrlength; i++) {
+        arr[i] = +prompt("enter elements of array");
+    }
+    for (let i = 1; i < arrlength; i++) {
+            arr[i] = arr[i] + arr[i - 1];
+    }
+    document.write(arr);
+
+</script>
+</body>
+</html>

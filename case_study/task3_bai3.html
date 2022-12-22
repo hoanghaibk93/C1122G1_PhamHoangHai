@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm chỉ số của phân số lớn nhất</title>
+</head>
+<body>
+<script>
+    let arrOneLength = prompt("Enter a length of arrayone");
+    let arrTwoLength = prompt("Enter a length of arraytwo");
+    let arrOne = [];
+    let arrTwo = [];
+    for (let i = 0; i < arrOneLength; i++) {
+        arrOne[i] = +prompt("Enter elements of arrayone");
+    }
+    for (let j = 0; j < arrTwoLength; j++) {
+        arrTwo[j] = +prompt("Enter elements of arraytwo");
+    }
+
+    alert(maxFraction(arrOne, arrTwo));
+
+    function maxFraction(numerators, denominators) {
+        let fraction = [];
+        for (let i = 0; i < numerators.length; i++) {
+            fraction[i] = (numerators[i] / denominators[i]);
+        }
+        let max = fraction[0];
+        for (let i = 0; i < fraction.length; i++) {
+            if (max < fraction[i]) {
+                max = fraction[i];
+            }
+        }
+        return fraction.indexOf(max);
+    }
+
+</script>
+</body>
+</html>

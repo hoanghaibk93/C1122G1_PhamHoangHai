@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm mảng missingValue</title>
+</head>
+<body>
+<script>
+    let arrOneLength = prompt("Enter a length of arrayone");
+    let arrTwoLength = prompt("Enter a length of arraytwo");
+    let arrOne = [];
+    let arrTwo = [];
+    for (let i = 0; i < arrOneLength; i++) {
+        arrOne[i] = prompt("Enter elements of arrayone");
+    }
+    for (let j = 0; j < arrTwoLength; j++) {
+        arrTwo[j] = prompt("Enter elements of arrayTwo");
+    }
+    for (let i = 0; i < arrOneLength; i++) {
+        for (let j = 0; j < arrTwoLength; j++) {
+            if (arrOne[i] === arrTwo[j]) {
+                arrTwo.splice(j, 1);
+                break;
+            }
+        }
+    }
+    document.write(arrTwo);
+</script>
+</body>
+</html>

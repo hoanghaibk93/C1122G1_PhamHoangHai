@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gọi thức uống</title>
+</head>
+<body>
+<h1>Menu quán nước</h1>
+
+<input onclick="chooseDrink(0,arrayDrinkOne,arrayMoneyOne)" type="button" value="1">
+<input onclick="chooseDrink(1,arrayDrinkOne,arrayMoneyOne)" type="button" value="2">
+<input onclick="chooseDrink(2,arrayDrinkOne,arrayMoneyOne)" type="button" value="3">
+<input onclick="chooseDrink(3,arrayDrinkOne,arrayMoneyOne)" type="button" value="4">
+<input onclick="chooseDrink(4,arrayDrinkOne,arrayMoneyOne)" type="button" value="5">
+<input onclick="chooseDrink(5,arrayDrinkOne,arrayMoneyOne)" type="button" value="6">
+<input onclick="finish()" type="button" value="7">
+<p id="drink">Mời bạn chọn món</p>
+số lượng: <input id="total" type="number">
+<input onclick="totalBill()" type="button" value="tính tiền">
+<p id="totalMoney"></p>
+<script>
+    //let menu = document.getElementById("drink");
+    //let arrraNunber1 = [1, 2, 3, 4, 5, 6, 7];
+    let arrayDrinkOne = ["cafe", "cam vắt", "nước ép cà rốt", "nước ép cà chua", "nước lọc", "nước dừa", "thoát gọi món"];
+    let arrayMoneyOne = [15000, 20000, 25000, 23000, 10000, 30000];
+    let priceCurDrink;
+
+    function chooseDrink(number, arrayDrink, arrayMoney) {
+        document.getElementById("drink").innerHTML = arrayDrink[number] + " có đơn giá là : " + arrayMoney[number] + " vnd/ly";
+        priceCurDrink = arrayMoneyOne[number];
+    }
+
+    function totalBill() {
+        let totalBill1 = document.getElementById("total").value * priceCurDrink;
+        document.getElementById("totalMoney").innerHTML = "Tổng hóa đơn: " + totalBill1 + " vnd";
+    }
+
+    function finish() {
+        document.getElementById("drink").innerHTML = "Mời bạn chọn món";
+        document.getElementById("totalMoney").innerHTML = " ";
+        document.getElementById("total").value = 0;
+    }
+
+
+</script>
+</body>
+</html>

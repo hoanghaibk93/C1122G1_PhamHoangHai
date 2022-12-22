@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //let arg1 = [1, 2, 2, 3, 1, 3, 1, 3];
+    let arg1 = [1, 1, 1, 1, 2, 3];
+    for (let i = 0; i < arg1.length; i++) {
+        for (let j = i + 1; j < arg1.length; j++) {
+            if (arg1[i] > arg1[j]) {
+                let a = arg1[i];
+                arg1[i] = arg1[j];
+                arg1[j] = a;
+            }
+        }
+    }
+    alert(arg1)
+    let count = 0;
+    for (let i = 0; i < arg1.length - 1; i++) {
+        if (arg1[i] === arg1[i + 1]) {
+            count++;
+        }
+    }
+    let numberOther = (arg1.length - count);
+    if ((arg1.length % numberOther) === 0) {
+        alert("true");
+    } else {
+        alert("false");
+    }
+    //document.write(arg1)
+</script>
+</body>
+</html>

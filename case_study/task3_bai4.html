@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập vào bằng số và in ra bằng chữ</title>
+</head>
+<body>
+<script>
+    let number = prompt("Enter a number");
+    //alert(numberToWord(1234))
+    alert(numberToWord(number));
+
+    function numberToWord(number) {
+        let arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let arrWord = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+        let inputArrNumber = number.toString().split("");
+        for (let i = 0; i < inputArrNumber.length; i++) {
+            for (let j = 0; j < arrNumber.length; j++) {
+                if (parseInt(inputArrNumber[i]) === arrNumber[j]) {
+                    inputArrNumber[i] = arrWord[j];
+                }
+            }
+        }
+        return inputArrNumber.join(" ");
+    }
+
+</script>
+</body>
+</html>
