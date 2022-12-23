@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng các số chẵn trong ma trận có kích thước m*n</title>
+</head>
+<body>
+<script>
+
+    let m = +prompt("Enter size m of array");
+    let n = +prompt("Enter size n of array");
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+    }
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = +prompt("Enter elements of array");
+        }
+    }
+    alert(totalEvenNumber(arr));
+
+    function totalEvenNumber(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] % 2 === 0) {
+                    sum += array[i][j];
+                }
+            }
+        }
+        return "total of even number is: " + sum;
+    }
+</script>
+</body>
+</html>

@@ -15,7 +15,7 @@
 <script>
     let number = +prompt("Nhập số lượng số nguyên tố cần in ra");
     let count = 0;
-    for (let i = 2; i <= number - 1; i++) {
+    for (let i = 2; i <= Math.sqrt(number); i++) {
         if (number % i == 0) {
             count++;
         }

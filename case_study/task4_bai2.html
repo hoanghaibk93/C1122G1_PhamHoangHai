@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ký tự khác nhau</title>
+</head>
+<body>
+<script>
+    let stringNew = prompt("Enter a string");
+    alert(differentSymbolsNaive(stringNew));
+
+    function differentSymbolsNaive(stringOne) {
+        let arrayStringOne = stringOne.split("");
+        let arrayStringTwo = [];
+        for (let i = 0; i < stringOne.length; i++) {
+            if (!arrayStringTwo.includes(stringOne[i])) {
+                arrayStringTwo.push(stringOne[i]);
+            }
+        }
+        return arrayStringTwo.length;
+    }
+</script>
+</body>
+</html>

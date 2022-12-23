@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm liệt kê các số nguyên tố và đếm các số nguyên tố có trong mảng</title>
+</head>
+<body>
+<script>
+    let m = +prompt("Enter size m of array");
+    let n = +prompt("Enter size n of array");
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+    }
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = +prompt("Enter elements of array");
+        }
+    }
+    //document.write("số lượng số nguyên tố có trong mảng là: " + countPrime(arr) + ", các số nguyên tố đó có trong mảng là: " + listOfPrime(arr));
+    document.write("số lượng số nguyên tố có trong mảng là: " + countPrime(arr));
+    document.write("các số nguyên tố đó có trong mảng là: " + listOfPrime(arr));
+
+    function isPrime(number) {
+        let flag = true;
+        if (number === 1) {
+            flag = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
+    function countPrime(array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (isPrime(array[i][j])) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    function listOfPrime(array) {
+        let prime = "";
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (isPrime(array[i][j])) {
+                    prime += array[i][j] + ",";
+                }
+            }
+        }
+        return prime;
+    }
+</script>
+</body>
+</html>

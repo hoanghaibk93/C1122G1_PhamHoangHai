@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     let badString ="con                       ga"
+    // //let b= a.charAt(0).toUpperCase()
+    // alert(a.slice(0,1,"b"))
+ let c = []
+    let newString = badString.trim().toLowerCase();
+    let newStringOne = newString.split(" ");
+     for (let i = 0; i < newStringOne.length ; i++) {
+         if (newStringOne[i] !==""){
+             c.push(newStringOne[i])
+         }
+     }
+    alert(c.join(" "))
+    // let c = [];
+    // let d = [];
+    // let e = []
+    // for (let i = 0; i < newStringOne.length ; i++) {
+    //     if (newStringOne[i]===""){
+    //         newStringOne.splice(i,1)
+    //     }
+    // }
+    // alert(newStringOne)
+     let string = "con         gà sắp"
+     string= string.replace(/\s/g, '')
+     // var temp = [];
+     // //string = '' + string;
+     // splitstring = string.split(" ");
+     // for(i = 0; i < splitstring.length; i++){
+     //     temp += splitstring[i] + "";}
+     alert(string)
+</script>
+</body>
+</html>

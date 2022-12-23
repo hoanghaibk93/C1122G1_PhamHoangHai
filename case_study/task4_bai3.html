@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ký tự chung của 2 chuỗi</title>
+</head>
+<body>
+<script>
+    let inputStringOne = prompt("Enter a stringone");
+    let inputStringTwo = prompt("Enter a stringtwo");
+    alert(commonCharacterCount(inputStringOne, inputStringTwo));
+
+    function commonCharacterCount(stringOne, stringTwo) {
+        let arrayStringOne = stringOne.split("");
+        let arrayStringTwo = stringTwo.split("");
+        let count = 0;
+        for (let i = 0; i < arrayStringOne.length; i++) {
+            for (let j = 0; j < arrayStringTwo.length; j++) {
+                if (arrayStringOne[i] === arrayStringTwo[j]) {
+                    count++;
+                    arrayStringTwo.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        return count;
+    }
+</script>
+</body>
+</html>

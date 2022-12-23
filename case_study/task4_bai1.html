@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuẩn hóa xâu ký tự</title>
+</head>
+<body>
+<script>
+    let badStringOne = prompt("Enter a bad string");
+    alert(getCharacter(badStringOne));
+
+    function getCharacter(badString) {
+        let newString = badString.toLowerCase();
+        let newStringOne = newString.split(" ");
+        let newStringTwo = [];
+        let newStringThree = [];
+        let newStringFour = [];
+        let newStringFive = [];
+        for (let i = 0; i < newStringOne.length; i++) {
+            if (newStringOne[i] !== "") {
+                newStringTwo.push(newStringOne[i]);
+            }
+        }
+        for (let i = 0; i < newStringTwo.length; i++) {
+            newStringThree[i] = newStringTwo[i].charAt(0).toUpperCase();
+            newStringFour[i] = newStringTwo[i].slice(1);
+            newStringFive[i] = newStringThree[i] + newStringFour[i];
+        }
+        let newStringSix = [];
+        for (let i = 0; i < newStringFive.length; i++) {
+            newStringSix[i] = newStringFive[i].length;
+        }
+        let max = newStringSix[0];
+        for (let i = 1; i < newStringSix.length; i++) {
+            if (newStringSix[i] > max) {
+                max = newStringSix[i];
+            }
+        }
+        let indexMax = newStringSix.indexOf(max);
+        return "Chuổi sau khi xử lý: " + newStringFive.join(" ") + " ,từ dài nhất là: " + newStringFive[indexMax];
+    }
+
+</script>
+</body>
+</html>

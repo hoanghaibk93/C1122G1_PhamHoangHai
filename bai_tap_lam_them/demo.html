@@ -6,15 +6,28 @@
 </head>
 <body>
 <script>
-    function findMax(arr) {
-        let arr = [2, 3, 1];
-        arr.sort((function (a, b) {
-            return b - a;
-        }));
-        return arr[0];
+    function CheckString(str) {
+        let a = str.toLowerCase().split(" "); // viết thường hết mấy cái chữ mình nhập vào
+        for (let i = 0; i < a.length; i++) {
+            a[i] = a[i].charAt(0).toUpperCase() + a[i].substring(1); //chọn 1 mảng và viết hoa giá trị đầu tiên của từng chữ
+        }
+        return a.join(' '); // xóa dấu cách
     }
 
-    document.write(findMax([2,4,5]));
+    function max(arr) {
+        let max = arr[0];
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+            }
+        }
+        return max;
+    }
+
+    let a = prompt("Nhập chuỗi bạn muốn chuyển đổi: ");
+    document.write("Chuỗi từ bạn vừa nhập sau khi chuyển đổi: " + CheckString(a) + '<br>');
+    let array = CheckString(a).split(' ');
+    document.write('Chữ dài nhất trong chuỗi là: ' + max(array));
 </script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tần số xuất hiện trong mảng</title>
+</head>
+<body>
+<script>
+    let a=[1,1,2,2,3]
+    alert(check(a))
+
+    function check(array) {
+        let arrayOne = [];
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+                if (array[i] === array[j]) {
+                    count++;
+                }
+            }
+            arrayOne.push(count);
+            count = 0;
+        }
+        let flag = true;
+        for (let i = 0; i < arrayOne.length; i++) {
+            if (arrayOne[0] !== arrayOne[i]) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+</script>
+</body>
+</html>
