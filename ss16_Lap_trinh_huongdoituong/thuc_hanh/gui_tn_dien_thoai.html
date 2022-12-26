@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gui message dien thoai</title>
+</head>
+<body>
+<script>
+    class Mobile {
+
+        constructor(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+       message = "";
+        setMessage(message) {
+            this.message = message;
+        }
+
+        getMessage() {
+            return this.message;
+        }
+
+        sendMessage(message,mobile) {
+        mobile.setMessage(message)
+        }
+    }
+    iphone = new Mobile(1,"iphone")
+    android = new Mobile(2,"Samsung")
+    iphone.sendMessage("chao con ga",android)
+    alert(android.getMessage())
+
+</script>
+</body>
+</html>

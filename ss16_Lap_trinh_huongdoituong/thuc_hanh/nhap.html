@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Date {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay(){
+            return this.day
+        }
+        setDay(tttr){
+            this.day=tttr
+        }
+    }
+    date = new Date(10,11,2022)
+    alert(date.day +"/" +date.month +"/" +date.year)
+    date.setDay(15)
+    alert(date.day +"/" +date.month +"/" +date.year)
+</script>
+</body>
+</html>

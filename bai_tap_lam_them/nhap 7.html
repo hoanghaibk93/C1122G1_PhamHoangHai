@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lap trinh huong doi tuong</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(id, name, address) {
+            this.id44 = id;
+            this.name = name;
+            this.address = address;
+            this.getinfor = function () {
+                return "id is: " + this.id44 + "name is: " + this.name + "address is: " + this.address;
+            };
+        }
+    }
+    let student = new Student(1,"Hai","huế")
+    document.write(student.getinfor())
+    document.write(student.address)
+    document.write(student.id44)
+</script>
+</body>
+</html>
