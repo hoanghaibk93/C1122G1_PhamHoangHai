@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = "<table border='1'>";
+    for (let i = 1; i < 9; i++) {
+        num = num + "<tr>";
+        for (let j = 2; j < 8; j++) {
+            num = num + "<td>" + j + "x" + i + "=" + j * i + "</td>";
+        }
+        num = num + "</tr>"
+    }
+    num = num + "</table>"
+    document.write(num)
+</script>
+</body>
+</html>

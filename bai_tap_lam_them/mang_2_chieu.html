@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Enter a lengtha");
+    let b = prompt("Enter a lengthb");
+    let array = [];
+    for (let i = 0; i < a; i++) {
+        array[i] = [];
+    }
+    for (let i = 0; i < a; i++) {
+        for (let j = 0; j < b; j++) {
+            array[i][j] = prompt("enter a element");
+        }
+    }
+    console.log(isarray(array));
+
+    function isarray(c) {
+        let d="";
+        for (let i = 0; i < c.length; i++) {
+            for (let j = 0; j < c[i].length; j++) {
+                document.write(c[i][j]+"<br>")
+            }
+        }
+    }
+</script>
+</body>
+</html>

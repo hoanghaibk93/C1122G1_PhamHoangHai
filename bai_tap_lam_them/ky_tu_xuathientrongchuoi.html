@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ký tự xuất hiện trong chuỗi</title>
+</head>
+<body>
+<script>
+    let stringOne = prompt("Nhập chuổi");
+    document.write(countCharecter(stringOne));
+
+
+    function countCharecter(stringNew) {
+        let a = stringNew.split(" ").join("").split("");
+        let b = [];
+        let c = [];
+        let d = "";
+        for (let i = 0; i < a.length; i++) {
+            let count = 0;
+            for (let j = 0; j < a.length; j++) {
+                if (a[i] === a[j]) {
+                    count++;
+                }
+            }
+            if (!c.includes(a[i])) {
+                b.push(count);
+                c.push(a[i]);
+                d += c[c.length-1] + " số lần xuất hiện là " + b[c.length-1] + "<br>";
+            }
+        }
+        return d
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArrayOne = prompt("Enter a length of array");
+    let arrayOne = [];
+    for (let i = 0; i < lengthArrayOne; i++) {
+        arrayOne[i] = prompt("enter  elements of array");
+    }
+    document.write(isreverse(arrayOne));
+
+    function isreverse(array) {
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    let a = array[i];
+                    array[i] = array[j];
+                    array[j] = a;
+                }
+            }
+        }
+        return(array)
+    }
+</script>
+</body>
+</html>

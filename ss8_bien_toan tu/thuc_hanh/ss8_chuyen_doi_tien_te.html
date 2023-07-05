@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td><input id="amount" type="number"></td>
+        <td>
+            <select id="money">
+                <option value="VietNam">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="money2">
+                <option value="VietNam">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td><input onclick="resultA()" type="button" value="Convert"></td>
+    </tr>
+    <tr>
+        <td>
+            <p id="resultOne"></p>
+        </td>
+    </tr>
+</table>
+<script>
+
+    function resultA() {
+        let a1 = document.getElementById("amount").value;
+        let b1 = document.getElementById("money").value;
+        let c1 = document.getElementById("money2").value;
+        document.getElementById("resultOne").innerHTML = result(a1,b1,c1)
+        ;
+    }
+    //alert(result(2,"USD","VietNam"))
+
+    function result(a, b, c) {
+        let d;
+        if ((b === "VietNam") && (c === "VietNam")) {
+            d = a + "VND";
+        } else if ((b === "VietNam") && (c === "USD")) {
+            d = a / 23000 + "USD";
+        } else if ((b === "USD") && (c === "USD")) {
+            d = a + "USD";
+        } else if ((b === "USD") && (c === "VietNam")) {
+            d = a * 23000 + "VietNam";
+        }
+        return d;
+    }
+</script>
+</body>
+</html>
